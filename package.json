@@ -1,0 +1,22 @@
+{
+  "name": "web_neuma_2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "purgecss": "purgecss --css css/main.css --content dist/index.html --output dist/style.css",
+    "sass": "sass --watch sass:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "gh-pages": "^4.0.0"
+  }
+}

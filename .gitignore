@@ -1,0 +1,7 @@
+# ignore all logs
+*.log
+
+*.map
+
+/node_modules
+/sass
