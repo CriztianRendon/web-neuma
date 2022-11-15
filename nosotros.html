@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
 		<title>Clinica Neuma</title>
 	</head>
 	<body>
@@ -276,53 +276,52 @@
 						</div>
 						<div class="col-12 col-lg-8 pt-5 pt-md-0">
 							<form
-								id="contact-form-home"
-								action=""
+								id="contact-form"
+								onsubmit="sendForm()"
 								class="text-center col-12">
 								<fieldset>
 									<div class="col form-floating mb-3">
 										<input
 											type="text"
 											class="form-control"
-											id="nombre"
+											id="user_name"
 											placeholder="Nombre y Apellido"
+											aria-required="true" required
 										/>
-										<label for="nombre">Nombre y Apellido</label>
+										<label for="user_name">Nombre y Apellido</label>
 									</div>
 									<div class="col form-floating mb-3">
 										<input
 											type="email"
 											class="form-control"
-											id="email"
+											id="user_email"
 											placeholder="Email"
+											aria-required="true" required
 										/>
-										<label for="title">Email</label>
+										<label for="user_email">Email</label>
 									</div>
-									<div class="form-floating">
+									<div class="form-floating mb-3">
 										<textarea
-											class="form-control mb-3"
-											placeholder="Leave a comment here"
-											id="consulta"
+											class="form-control"
+											placeholder="Escribí tu consulta"
+											id="user_message"
 											style="height: 100px"
+											aria-required="true" required
 										></textarea>
-										<label for="consulta"
+										<label for="user_message"
 											>Escribí tu consulta</label
 										>
 									</div>
 									<div class="col">
-										<button	type="submit"
-											class="col-12 btn-lg btn btn-primary text-light fw-bold">
+										<button class="col-12 btn-lg btn btn-primary text-light fw-bold">
 											Enviar consulta
 										</button>
 									</div>
 								</fieldset>
 							</form>
 						</div>
+					</div>
 				</div>
-				
-	
-				</div>
-				
 			</div>
 
 		</main>
@@ -344,24 +343,26 @@
 					Posadas, Misiones<br />
 					ARGENTINA
 				</p>
-				<div id="map"></div>
+				<iframe class="col-12 col-lg-6 " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.1321723356436!2d-55.8920487843422!3d-27.371587319091738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457bfb53d01c823%3A0x3431b856c369ef72!2sNeuma%20Respiratoria%20S.R.L.!5e0!3m2!1ses-419!2sar!4v1668533111605!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 			<div class="row text-center py-3">
 				<div class="col-12 col-lg-6">
 					<span class="fw-semibold">Copyrigth 2022 <i class="bi bi-c-circle"></i> Neuma SRL</span>
 				</div>
-				<div class="col-12 col-lg-6">
-					<span class="fw-lighter fs-6">Made with <i class="bi bi-heart-fill"></i> by <a class="link-light" href="https://github.com/CriztianRendon">Criztian Rendon</a></span>
-				</div>
 			</div>
         </footer>
 
-		<script src="main.js"></script>
+		<script src="js/index.js"></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+			(function(){
+				emailjs.init("FIdcWro__2BdVEVYG");
+			})();
+		</script>
         <script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
         </script>
-		<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd1qyVI5CgfNiXQNDHNijGmb-c7QRIoko&callback=initMap&v=weekly"
-		defer></script>
 	</body>
 </html>
